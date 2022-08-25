@@ -9,6 +9,11 @@ const Counter: React.FC = () => {
   );
   const [amount, setAmount] = useState<number>(0);
   const dispatch = useDispatch();
+
+  const resetAll = () => {
+    setAmount(0);
+    dispatch(reset());
+  };
   return (
     <div>
       <div className="counter-container">{count}</div>
@@ -19,10 +24,11 @@ const Counter: React.FC = () => {
         <button className="btn" onClick={() => dispatch(decrement())}>
           -
         </button>
-        <button onClick={() => dispatch(reset())}>Reset</button>
+        <button onClick={resetAll}>Reset</button>
         <div>
           <input
             type={"number"}
+            value={amount}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setAmount(Number(e.target.value))
             }
