@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.btn-container {
+  display: flex;
+  gap: 2em;
+}
+.btn {
+  width: 5em;
+  height: 2em;
+}
+.counter-container {
+  font-size: 2em;
+}

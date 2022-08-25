@@ -1,6 +1,7 @@
 import React from "react";
+import Counter from "./features/counter/Counter";
 const App: React.FC = () => {
-  return <div>Hello World!</div>
+  return <Counter />;
 };
 
 export default App;
